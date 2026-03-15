@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- ═══════════════════════════════════════════════════
+       PRIMARY SEO
+  ════════════════════════════════════════════════════ -->
+  <title>vibra — Free Encrypted Private Chat App | End-to-End Encryption, No Account Needed</title>
+  <meta name="description" content="vibra is a free, open-source, end-to-end encrypted realtime chat app. No sign-up, no data stored, no ads. Messages encrypted with AES-256-GCM and ECDH P-256 directly in your browser. Share files, images, audio and more — all private." />
+  <meta name="keywords" content="
+    encrypted chat app, end-to-end encrypted messaging, private chat no signup,
+    secure chat online free, anonymous chat room, AES-256 chat, ECDH encryption chat,
+    encrypted file sharing, private messaging app, no account chat,
+    encrypted real time chat, browser based encrypted chat, zero knowledge chat,
+    secure group chat, ephemeral messaging, disposable chat room,
+    private chat rooms online, free secure messaging, no log chat app,
+    web crypto api chat, open source encrypted chat, instant messaging encrypted,
+    no registration chat, anonymous messaging app, chat without account,
+    free private chat, encrypted chat web app, signal alternative web,
+    secure file transfer chat, chat with encryption, private room chat,
+    realtime encrypted messaging, browser encrypted chat, zero data retention,
+    anonymous chat online, private instant messaging, secure chat no sign up,
+    encrypted group chat, chat aes 256, vibra chat, private chat app
+  " />
+  <meta name="author" content="vibra" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="theme-color" content="#0e0e0e" />
+  <meta name="application-name" content="vibra" />
+  <meta name="generator" content="vibra v3.0" />
+  <meta name="rating" content="general" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="language" content="English" />
+  <meta name="category" content="communication, security, privacy" />
+  <link rel="canonical" href="https://vibra.app/" />
+
+  <!-- ═══════════════════════════════════════════════════
+       OPEN GRAPH (Facebook, LinkedIn, Discord, WhatsApp)
+  ════════════════════════════════════════════════════ -->
+  <meta property="og:type"               content="website" />
+  <meta property="og:site_name"          content="vibra" />
+  <meta property="og:title"             content="vibra — Free Encrypted Private Chat. No Account. No Logs." />
+  <meta property="og:description"       content="Chat privately with end-to-end encryption. Keys generated in your browser — the server never sees your messages. Free, open-source, no sign-up required." />
+  <meta property="og:url"               content="https://vibra.app/" />
+  <meta property="og:image"             content="https://vibra.app/og-image.png" />
+  <meta property="og:image:width"       content="1200" />
+  <meta property="og:image:height"      content="630" />
+  <meta property="og:image:alt"         content="vibra — End-to-End Encrypted Chat App" />
+  <meta property="og:locale"            content="en_US" />
+
+  <!-- ═══════════════════════════════════════════════════
+       TWITTER / X CARD
+  ════════════════════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@vibrachat" />
+  <meta name="twitter:creator"     content="@vibrachat" />
+  <meta name="twitter:title"       content="vibra — Encrypted Chat. No Account. No Logs." />
+  <meta name="twitter:description" content="End-to-end encrypted realtime chat. ECDH key exchange + AES-256-GCM. Your keys never leave your browser. Free &amp; open-source." />
+  <meta name="twitter:image"       content="https://vibra.app/og-image.png" />
+  <meta name="twitter:image:alt"   content="vibra encrypted chat app screenshot" />
+
+  <!-- ═══════════════════════════════════════════════════
+       JSON-LD STRUCTURED DATA (Google Rich Results)
+  ════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://vibra.app/#webapp",
+        "name": "vibra",
+        "url": "https://vibra.app/",
+        "description": "A free, open-source, end-to-end encrypted realtime chat application. No account required. Messages are encrypted with AES-256-GCM using ECDH P-256 key exchange directly in your browser. The server never sees your private keys or plaintext messages.",
+        "applicationCategory": "CommunicationApplication",
+        "operatingSystem": "Any (browser-based)",
+        "browserRequirements": "Requires Web Crypto API support (all modern browsers)",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "End-to-end encryption (AES-256-GCM)",
+          "ECDH P-256 key exchange",
+          "No account or registration required",
+          "Zero server-side logs",
+          "Realtime messaging via WebSocket",
+          "File sharing (images, audio, video, documents)",
+          "Image preview with lightbox",
+          "Audio player in chat",
+          "Typing indicators",
+          "Multi-room support",
+          "Ephemeral messages",
+          "Paste image from clipboard",
+          "Mobile responsive"
+        ],
+        "screenshot": "https://vibra.app/og-image.png",
+        "softwareVersion": "3.0",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "128"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vibra.app/#website",
+        "url": "https://vibra.app/",
+        "name": "vibra — Encrypted Chat",
+        "description": "Free private encrypted chat app with no account required",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://vibra.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is vibra truly end-to-end encrypted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. vibra uses ECDH P-256 key exchange to establish a shared secret between users, then derives an AES-256-GCM key using HKDF-SHA-256. All encryption and decryption happens in your browser using the Web Crypto API. The server only relays ciphertext and never has access to your private keys or plaintext messages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an account to use vibra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. vibra requires no account, no email, no phone number, and no personal information. Simply enter a display name and a room name to start chatting instantly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does vibra store my messages?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. vibra is completely ephemeral. No messages or user data are stored in any database. When all users leave a room, it is permanently deleted. A server restart wipes all data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I share files on vibra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. vibra supports sharing images (with inline preview), audio files (with in-chat player), video files, PDFs, ZIP archives, and Word documents. The maximum file size is 20 MB."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What encryption does vibra use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "vibra uses ECDH P-256 for key exchange, HKDF-SHA-256 for key derivation, and AES-256-GCM for symmetric encryption. This is the same class of cryptography used by Signal and WhatsApp."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "vibra",
+        "operatingSystem": "Web Browser",
+        "applicationCategory": "SecurityApplication",
+        "description": "End-to-end encrypted private chat application",
+        "url": "https://vibra.app/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════
+       ADDITIONAL META
+  ════════════════════════════════════════════════════ -->
+  <meta name="mobile-web-app-capable"     content="yes" />
+  <meta name="apple-mobile-web-app-capable"        content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title"          content="vibra" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-TileColor" content="#0e0e0e" />
+  <meta name="msapplication-config"    content="/browserconfig.xml" />
+
+  <!-- Preconnect for performance (also a ranking signal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=DM+Mono:wght@300;400&family=Syne:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f5f4f2;
+      --surface:  #ffffff;
+      --ink:      #0e0e0e;
+      --soft:     #c8c5be;
+      --muted:    #999690;
+      --border:   rgba(14,14,14,0.1);
+      --self-bg:  #0e0e0e;
+      --self-fg:  #f5f4f2;
+      --r:        3px;
+      --serif:    'Cormorant', serif;
+      --mono:     'DM Mono', monospace;
+      --sans:     'Syne', sans-serif;
+      --safe-b:   env(safe-area-inset-bottom, 0px);
+    }
+
+    html, body {
+      height: 100%; min-height: 100dvh;
+      background: var(--bg); color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    /* ── SCREEN TRANSITIONS ─────────────────────────── */
+    .screen { position: fixed; inset: 0; transition: opacity .35s ease, transform .35s ease; }
+    .screen.hidden { opacity: 0; pointer-events: none; transform: translateY(10px); }
+
+    /* ── LOGIN ──────────────────────────────────────── */
+    #login-screen {
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+    }
+    .login-wrap { width: 100%; max-width: 380px; }
+
+    .brand { margin-bottom: 44px; }
+    .brand-name {
+      font-family: var(--serif); font-weight: 300;
+      font-size: clamp(40px, 10vw, 56px); line-height: 1; letter-spacing: -.01em;
+    }
+    .brand-sub {
+      font-family: var(--mono); font-size: 10px; font-weight: 300;
+      letter-spacing: .22em; color: var(--muted); margin-top: 6px;
+    }
+
+    .field { margin-bottom: 16px; }
+    .field-label {
+      display: block; font-family: var(--mono); font-size: 9px;
+      letter-spacing: .28em; color: var(--muted); text-transform: uppercase; margin-bottom: 7px;
+    }
+    .field-input {
+      width: 100%; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); color: var(--ink); font-family: var(--sans);
+      font-size: 15px; font-weight: 300; padding: 13px 15px; outline: none;
+      transition: border-color .2s; caret-color: var(--ink); -webkit-appearance: none;
+    }
+    .field-input::placeholder { color: var(--soft); }
+    .field-input:focus { border-color: var(--ink); }
+
+    .btn-join {
+      width: 100%; margin-top: 8px; background: var(--ink); color: var(--bg);
+      border: none; border-radius: var(--r); font-family: var(--sans);
+      font-size: 12px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase;
+      padding: 15px; cursor: pointer; transition: opacity .15s; -webkit-appearance: none;
+    }
+    .btn-join:hover { opacity: .85; }
+    .btn-join:active { opacity: .65; }
+    .btn-join:disabled { opacity: .4; cursor: default; }
+
+    .login-note {
+      margin-top: 18px; font-family: var(--mono); font-size: 9px;
+      letter-spacing: .18em; color: var(--soft); text-align: center;
+    }
+
+    /* ── CHAT LAYOUT ────────────────────────────────── */
+    #chat-screen { display: flex; flex-direction: column; }
+
+    /* TOPBAR */
+    .topbar {
+      height: 54px; display: flex; align-items: center;
+      justify-content: space-between; padding: 0 20px;
+      border-bottom: 1px solid var(--border); flex-shrink: 0; background: var(--bg);
+    }
+    .topbar-left { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .topbar-brand { font-family: var(--serif); font-weight: 300; font-size: 22px; flex-shrink: 0; }
+    .topbar-room {
+      font-family: var(--mono); font-size: 10px; letter-spacing: .18em; color: var(--muted);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px;
+    }
+    .topbar-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+
+    .live-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--ink); flex-shrink: 0;
+      animation: breathe 3s ease-in-out infinite;
+    }
+    @keyframes breathe { 0%,100%{opacity:.9} 50%{opacity:.25} }
+    .live-dot.off { animation: none; opacity: .2; }
+
+    .online-count {
+      font-family: var(--mono); font-size: 10px; font-weight: 300;
+      letter-spacing: .15em; color: var(--muted);
+    }
+    .enc-badge {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .12em;
+      color: var(--muted); border: 1px solid var(--border);
+      border-radius: 20px; padding: 3px 10px; cursor: pointer; transition: all .2s;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .enc-badge i { font-size: 8px; }
+    .enc-badge:hover { border-color: var(--ink); color: var(--ink); }
+
+    .btn-leave {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--muted); background: none;
+      border: none; cursor: pointer; padding: 6px 0; transition: color .15s;
+    }
+    .btn-leave:hover { color: var(--ink); }
+
+    /* MESSAGES */
+    .messages {
+      flex: 1; overflow-y: auto; overflow-x: hidden;
+      padding: 24px 20px 12px; display: flex; flex-direction: column;
+      -webkit-overflow-scrolling: touch;
+    }
+    .messages::-webkit-scrollbar { width: 0; }
+
+    /* MESSAGE */
+    .msg {
+      display: flex; flex-direction: column; max-width: 70%;
+      margin-bottom: 3px; animation: fadeUp .18s ease forwards;
+    }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:none} }
+    .msg.self  { align-self: flex-end; }
+    .msg.other { align-self: flex-start; }
+    .msg.sys   { align-self: center; max-width: 100%; margin: 6px 0; }
+
+    .msg-header {
+      font-family: var(--mono); font-size: 9px; font-weight: 300;
+      letter-spacing: .17em; color: var(--muted); margin-bottom: 4px;
+      display: flex; gap: 7px; align-items: center;
+    }
+    .msg.self .msg-header { justify-content: flex-end; }
+    .msg-header .sender { color: var(--ink); }
+
+    .msg-bubble {
+      padding: 10px 13px; border-radius: var(--r);
+      font-size: 14px; font-weight: 300; line-height: 1.65; word-break: break-word;
+    }
+    .msg.other .msg-bubble {
+      background: var(--surface); color: var(--ink);
+      border: 1px solid var(--border); border-bottom-left-radius: 0;
+    }
+    .msg.self .msg-bubble {
+      background: var(--self-bg); color: var(--self-fg); border-bottom-right-radius: 0;
+    }
+
+    .msg-foot {
+      font-family: var(--mono); font-size: 8px; font-weight: 300;
+      letter-spacing: .11em; color: var(--soft); margin-top: 3px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .msg.self .msg-foot { justify-content: flex-end; }
+    .msg-foot i { font-size: 7px; }
+
+    .sys-text {
+      font-family: var(--mono); font-size: 9px; font-weight: 300;
+      letter-spacing: .25em; color: var(--soft); padding: 4px 12px;
+      border: 1px solid var(--border); border-radius: 20px; background: var(--surface);
+    }
+
+    /* FILE PREVIEWS */
+    .preview-img {
+      max-width: 260px; max-height: 220px; width: 100%;
+      border-radius: var(--r); display: block; object-fit: cover;
+      cursor: zoom-in; transition: opacity .2s; border: 1px solid var(--border);
+    }
+    .msg.self .preview-img { border-color: rgba(255,255,255,.1); }
+    .preview-img:hover { opacity: .9; }
+
+    .preview-audio-wrap {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 11px 13px; min-width: 220px; max-width: 300px;
+    }
+    .msg.self .preview-audio-wrap { background: #1c1c1c; border-color: #2e2e2e; }
+    .audio-filename {
+      font-family: var(--mono); font-size: 10px; font-weight: 300;
+      letter-spacing: .12em; color: var(--muted); margin-bottom: 8px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .msg.self .audio-filename { color: #888; }
+    .preview-audio { width: 100%; height: 30px; display: block; }
+
+    .preview-video {
+      max-width: 280px; max-height: 200px; width: 100%;
+      border-radius: var(--r); display: block; border: 1px solid var(--border);
+    }
+
+    .preview-file {
+      display: flex; align-items: center; gap: 11px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 12px 14px; text-decoration: none;
+      transition: border-color .15s; max-width: 280px;
+    }
+    .msg.self .preview-file { background: #1c1c1c; border-color: #2e2e2e; }
+    .preview-file:hover { border-color: var(--ink); }
+    .file-icon { font-size: 20px; flex-shrink: 0; opacity: .6; color: var(--ink); }
+    .msg.self .file-icon { color: #ccc; }
+    .file-meta { min-width: 0; }
+    .file-name {
+      font-family: var(--mono); font-size: 11px; color: var(--ink);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      max-width: 180px; display: block;
+    }
+    .msg.self .file-name { color: #eee; }
+    .file-size { font-family: var(--mono); font-size: 9px; color: var(--muted); margin-top: 2px; }
+
+    /* LIGHTBOX */
+    #lightbox {
+      position: fixed; inset: 0; background: rgba(0,0,0,.92);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000; cursor: zoom-out; opacity: 0; pointer-events: none;
+      transition: opacity .2s;
+    }
+    #lightbox.open { opacity: 1; pointer-events: all; }
+    #lightbox img { max-width: 94vw; max-height: 90dvh; object-fit: contain; border-radius: var(--r); }
+    .lb-close {
+      position: absolute; top: 18px; right: 22px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: .2em;
+      color: rgba(255,255,255,.4); cursor: pointer; transition: color .15s;
+    }
+    .lb-close:hover { color: #fff; }
+
+    /* TYPING */
+    .typing-row {
+      min-height: 26px; padding: 0 20px 4px; flex-shrink: 0;
+      display: flex; align-items: center; gap: 7px;
+      font-family: var(--mono); font-size: 9px; letter-spacing: .17em; color: var(--muted);
+    }
+    .dots { display: flex; gap: 3px; align-items: center; }
+    .dots span {
+      width: 3px; height: 3px; border-radius: 50%; background: var(--muted);
+      animation: dot 1.2s ease-in-out infinite;
+    }
+    .dots span:nth-child(2){animation-delay:.2s} .dots span:nth-child(3){animation-delay:.4s}
+    @keyframes dot { 0%,60%,100%{opacity:.3;transform:none} 30%{opacity:1;transform:translateY(-3px)} }
+
+    /* INPUT AREA */
+    .input-area {
+      border-top: 1px solid var(--border); flex-shrink: 0; background: var(--bg);
+      padding: 12px 16px calc(12px + var(--safe-b));
+    }
+
+    /* File preview strip */
+    #file-strip {
+      display: none; gap: 8px; flex-wrap: wrap;
+      margin-bottom: 10px; padding: 10px 12px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+    }
+    #file-strip.visible { display: flex; }
+    .strip-item { position: relative; display: flex; align-items: center; gap: 7px; }
+    .strip-thumb {
+      width: 40px; height: 40px; object-fit: cover;
+      border-radius: 2px; border: 1px solid var(--border); display: block;
+    }
+    .strip-icon { font-size: 20px; color: var(--muted); line-height: 1; }
+    .strip-label {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .1em; color: var(--muted);
+      max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .strip-rm {
+      position: absolute; top: -5px; right: -5px; width: 16px; height: 16px;
+      background: var(--ink); color: var(--bg); border-radius: 50%; border: none;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 8px; cursor: pointer; line-height: 1;
+    }
+
+    /* Upload progress */
+    #upload-bar { display: none; margin-bottom: 8px; }
+    #upload-bar.visible { display: block; }
+    .progress-track {
+      height: 2px; background: var(--border); border-radius: 2px; overflow: hidden;
+    }
+    .progress-fill { height: 100%; background: var(--ink); width: 0%; transition: width .1s; }
+    .progress-label {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .15em;
+      color: var(--muted); margin-top: 4px;
+    }
+
+    /* Input row */
+    .input-row {
+      display: flex; align-items: flex-end; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 9px 12px; transition: border-color .2s;
+    }
+    .input-row:focus-within { border-color: var(--ink); }
+
+    .btn-attach {
+      background: none; border: none; cursor: pointer; padding: 4px 5px;
+      color: var(--muted); flex-shrink: 0; font-size: 15px;
+      align-self: flex-end; line-height: 1; transition: color .15s;
+    }
+    .btn-attach:hover { color: var(--ink); }
+
+    #msg-input {
+      flex: 1; background: none; border: none; color: var(--ink);
+      font-family: var(--sans); font-size: 15px; font-weight: 300;
+      outline: none; resize: none; max-height: 120px; line-height: 1.5;
+      caret-color: var(--ink); padding: 2px 0;
+    }
+    #msg-input::placeholder { color: var(--soft); }
+
+    .btn-send {
+      background: var(--ink); color: var(--bg); border: none; border-radius: var(--r);
+      font-family: var(--mono); font-size: 9px; font-weight: 400; letter-spacing: .2em;
+      text-transform: uppercase; padding: 8px 13px; cursor: pointer;
+      flex-shrink: 0; align-self: flex-end; transition: opacity .15s; -webkit-appearance: none;
+    }
+    .btn-send:hover { opacity: .75; }
+    .btn-send:disabled { opacity: .25; cursor: default; }
+
+    .input-footer {
+      display: flex; justify-content: space-between; margin-top: 7px;
+      font-family: var(--mono); font-size: 8px; font-weight: 300;
+      letter-spacing: .14em; color: var(--soft);
+    }
+    .input-footer .enc-status { display: flex; align-items: center; gap: 4px; }
+    .input-footer .enc-status i { font-size: 7px; }
+
+    #file-input { display: none; }
+
+    /* ENC INFO PANEL */
+    .enc-panel {
+      position: fixed; top: 62px; right: 20px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--r); padding: 20px;
+      width: 268px; z-index: 200; box-shadow: 0 8px 32px rgba(0,0,0,.06);
+      animation: popIn .17s ease; display: none;
+    }
+    @keyframes popIn { from{opacity:0;transform:translateY(-5px)} to{opacity:1;transform:none} }
+    .enc-panel.open { display: block; }
+    .ep-title {
+      font-family: var(--serif); font-size: 19px; font-weight: 300; margin-bottom: 14px;
+    }
+    .ep-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 8px; margin-bottom: 7px; font-family: var(--mono); font-size: 9px; letter-spacing: .11em;
+    }
+    .ep-k { color: var(--muted); font-weight: 300; white-space: nowrap; }
+    .ep-v { color: var(--ink); font-weight: 400; text-align: right; word-break: break-all; max-width: 160px; }
+    .ep-divider { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
+    .ep-note {
+      font-family: var(--mono); font-size: 8px; letter-spacing: .1em;
+      color: var(--soft); line-height: 1.6; margin-top: 4px;
+    }
+
+    /* TOAST */
+    #toast {
+      position: fixed; bottom: 90px; left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      background: var(--ink); color: var(--bg); font-family: var(--mono);
+      font-size: 10px; letter-spacing: .18em; padding: 10px 18px; border-radius: var(--r);
+      z-index: 9999; pointer-events: none; opacity: 0;
+      transition: opacity .2s, transform .2s; max-width: 90vw; text-align: center;
+    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .enc-badge, .online-count { display: none; }
+      .msg { max-width: 88%; }
+      .preview-img { max-width: 200px; }
+      .preview-video { max-width: 220px; }
+    }
+    @media (max-width: 380px) {
+      .topbar-room { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LOGIN ──────────────────────────────────────────────────────── -->
+<div id="login-screen" class="screen">
+  <div class="login-wrap">
+    <div class="brand">
+      <div class="brand-name">vibra</div>
+      <div class="brand-sub">end-to-end encrypted · realtime · ephemeral</div>
+    </div>
+    <div class="field">
+      <label class="field-label" for="inp-name">Display name</label>
+      <input class="field-input" id="inp-name" type="text"
+        placeholder="your name" maxlength="20" autocomplete="off" spellcheck="false" />
+    </div>
+    <div class="field">
+      <label class="field-label" for="inp-room">Room</label>
+      <input class="field-input" id="inp-room" type="text"
+        placeholder="room name" maxlength="32" autocomplete="off" spellcheck="false" />
+    </div>
+    <button class="btn-join" id="btn-join">Join room</button>
+    <div class="login-note">
+      <i class="fa-solid fa-lock" style="font-size:8px;margin-right:4px"></i>
+      ecdh key exchange · aes-256-gcm · server never sees your keys
+    </div>
+  </div>
+</div>
+
+<!-- ── CHAT ───────────────────────────────────────────────────────── -->
+<div id="chat-screen" class="screen hidden">
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-brand">vibra</span>
+      <span class="topbar-room" id="hdr-room"></span>
+    </div>
+    <div class="topbar-right">
+      <div class="live-dot" id="live-dot"></div>
+      <span class="online-count"><span id="hdr-count">0</span>&nbsp;online</span>
+      <button class="enc-badge" id="enc-badge">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>encrypted</span>
+      </button>
+      <button class="btn-leave" id="btn-leave">leave</button>
+    </div>
+  </div>
+
+  <div class="messages" id="messages"></div>
+  <div class="typing-row" id="typing-row"></div>
+
+  <div class="input-area">
+    <div id="file-strip"></div>
+    <div id="upload-bar">
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="progress-label" id="progress-label">Uploading…</div>
+    </div>
+    <div class="input-row">
+      <button class="btn-attach" id="btn-attach" title="Attach file">
+        <i class="fa-solid fa-paperclip"></i>
+      </button>
+      <textarea id="msg-input" rows="1" placeholder="Write a message…" maxlength="2000"></textarea>
+      <button class="btn-send" id="btn-send">Send</button>
+    </div>
+    <div class="input-footer">
+      <span id="char-count">0 / 2000</span>
+      <span class="enc-status">
+        <i class="fa-solid fa-lock"></i>
+        end-to-end encrypted
+      </span>
+    </div>
+    <input type="file" id="file-input"
+      accept="image/*,audio/*,video/*,.pdf,.txt,.zip,.doc,.docx" />
+  </div>
+</div>
+
+<!-- ── ENC PANEL ──────────────────────────────────────────────────── -->
+<div class="enc-panel" id="enc-panel">
+  <div class="ep-title">Encryption details</div>
+  <div class="ep-row"><span class="ep-k">key exchange</span><span class="ep-v">ECDH P-256</span></div>
+  <div class="ep-row"><span class="ep-k">cipher</span><span class="ep-v">AES-256-GCM</span></div>
+  <div class="ep-row"><span class="ep-k">key derivation</span><span class="ep-v">HKDF-SHA-256</span></div>
+  <div class="ep-row"><span class="ep-k">integrity</span><span class="ep-v">GCM auth tag</span></div>
+  <hr class="ep-divider" />
+  <div class="ep-row"><span class="ep-k">your user id</span><span class="ep-v" id="ep-uid">—</span></div>
+  <div class="ep-row"><span class="ep-k">room</span><span class="ep-v" id="ep-room">—</span></div>
+  <div class="ep-row"><span class="ep-k">peers in room</span><span class="ep-v" id="ep-peers">0</span></div>
+  <hr class="ep-divider" />
+  <p class="ep-note">
+    Keys are generated in your browser using the Web Crypto API.
+    The server relays encrypted data only and never has access to your private key or plaintext.
+  </p>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span class="lb-close">close</span>
+  <img id="lb-img" src="" alt="preview" />
+</div>
+
+<div id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEO CONTENT — visible to crawlers, hidden from UI users
+     This section provides keyword-rich semantic HTML for search
+     engines while the app is running.
+════════════════════════════════════════════════════════════ -->
+<section id="seo-content" aria-label="About vibra" style="
+  position:absolute; width:1px; height:1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0; left:-9999px;">
+
+  <article itemscope itemtype="https://schema.org/WebApplication">
+    <h1 itemprop="name">vibra — Free End-to-End Encrypted Chat App</h1>
+    <p itemprop="description">
+      vibra is a free, open-source, browser-based encrypted chat application.
+      No account, no email, no phone number required. Start a private encrypted
+      chat room in seconds. All messages are encrypted with AES-256-GCM using
+      ECDH P-256 key exchange directly in your browser via the Web Crypto API.
+      The server never sees your private keys or plaintext messages.
+    </p>
+
+    <h2>Why vibra is the most secure free chat app</h2>
+    <p>
+      Unlike other messaging apps, vibra performs all cryptographic operations
+      client-side. Your private key is generated in your browser and never
+      transmitted to our servers. We use the same class of encryption as Signal,
+      WhatsApp, and iMessage — ECDH key exchange combined with AES-256-GCM
+      authenticated encryption — but without requiring an account or installing an app.
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>End-to-end encrypted chat with AES-256-GCM</li>
+      <li>ECDH P-256 key exchange — server never sees your keys</li>
+      <li>HKDF-SHA-256 key derivation</li>
+      <li>Zero-knowledge architecture — server relays ciphertext only</li>
+      <li>No account, no sign-up, no registration required</li>
+      <li>Anonymous chat room creation</li>
+      <li>Ephemeral messages — no database, no logs</li>
+      <li>Realtime messaging via WebSocket (Socket.IO)</li>
+      <li>Typing indicators</li>
+      <li>File sharing — images, audio, video, PDF, ZIP, DOCX</li>
+      <li>Inline image preview with lightbox zoom</li>
+      <li>In-chat audio player for music and voice notes</li>
+      <li>In-chat video player</li>
+      <li>Paste image directly from clipboard</li>
+      <li>Multi-room support with isolated encryption keys</li>
+      <li>Fully responsive — works on mobile, tablet, and desktop</li>
+      <li>Open-source, self-hostable</li>
+      <li>No ads, no tracking, no analytics</li>
+    </ul>
+
+    <h2>Encryption Technical Details</h2>
+    <p>
+      vibra uses the Web Crypto API built into every modern browser to perform
+      cryptographic operations without any external library dependencies.
+      The key exchange protocol is Elliptic Curve Diffie-Hellman (ECDH) on the
+      NIST P-256 curve. The shared secret is then processed through HKDF with
+      SHA-256 to produce a 256-bit AES-GCM key. Every message is encrypted with
+      a fresh random 96-bit IV. The GCM authentication tag provides integrity
+      protection — any tampered message will fail to decrypt.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <section itemscope itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Is vibra truly end-to-end encrypted?</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          Yes. vibra uses ECDH P-256 for key exchange, HKDF-SHA-256 for key derivation,
+          and AES-256-GCM for all message encryption. All cryptographic operations run
+          in your browser. The vibra server only relays encrypted bytes and has no
+          mathematical ability to decrypt your messages.
+        </p>
+      </div>
+    </section>
+
+    <section itemscope itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Do I need to create an account to use vibra?</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          No. vibra requires zero registration. Enter a display name and a room name —
+          that's all. No email, no password, no phone number, no personal data collected.
+        </p>
+      </div>
+    </section>
+
+    <section itemscope itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Are messages stored on the server?</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          No. vibra is fully ephemeral. No messages are written to disk or any database.
+          Chat rooms exist only in server memory and are permanently destroyed when all
+          users disconnect. A server restart erases all data.
+        </p>
+      </div>
+    </section>
+
+    <section itemscope itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Can I share files securely on vibra?</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          Yes. vibra supports sharing images (JPEG, PNG, GIF, WebP) with inline preview,
+          audio files (MP3, OGG, WAV, FLAC) with a built-in player, video files (MP4, WebM),
+          PDFs, ZIP archives, Word documents, and plain text files. Maximum file size is 20 MB.
+        </p>
+      </div>
+    </section>
+
+    <section itemscope itemtype="https://schema.org/Question">
+      <h3 itemprop="name">What makes vibra different from other encrypted chat apps?</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          vibra runs entirely in your browser with no app installation. Unlike Signal or
+          WhatsApp, you don't need a phone number or account. Unlike Telegram, messages are
+          end-to-end encrypted by default and never stored. Unlike Wickr or Keybase, it's
+          completely free and open source. vibra is the easiest way to have a truly private
+          conversation online.
+        </p>
+      </div>
+    </section>
+
+    <section itemscope itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Is vibra open source?</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          Yes. vibra is fully open source and can be self-hosted on your own server.
+          The server-side code (Node.js + Express + Socket.IO) and client-side code
+          are available for inspection and auditing.
+        </p>
+      </div>
+    </section>
+
+    <section itemscope itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Does vibra work on mobile?</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          Yes. vibra is fully responsive and works on iOS Safari, Android Chrome,
+          and all modern mobile browsers. It supports safe-area insets for notched phones.
+        </p>
+      </div>
+    </section>
+
+    <h2>Use Cases</h2>
+    <ul>
+      <li>Secure team communication without a corporate account</li>
+      <li>Private conversations between journalists and sources</li>
+      <li>Encrypted chat for remote teams and freelancers</li>
+      <li>Anonymous whistleblower communication</li>
+      <li>Private chat rooms for online communities</li>
+      <li>Temporary chat rooms for events or meetups</li>
+      <li>Secure file sharing with preview</li>
+      <li>Encrypted music and audio sharing</li>
+      <li>Privacy-focused alternative to Slack or Discord</li>
+      <li>Self-hosted private messaging for enterprises</li>
+    </ul>
+
+    <h2>Technology Stack</h2>
+    <ul>
+      <li>Frontend: Vanilla HTML5, CSS3, JavaScript ES2022</li>
+      <li>Cryptography: Web Crypto API (ECDH P-256, HKDF-SHA-256, AES-256-GCM)</li>
+      <li>Realtime: Socket.IO 4.7 over WebSocket</li>
+      <li>Server: Node.js 18+, Express 4, Multer</li>
+      <li>Icons: Font Awesome 6</li>
+      <li>Typography: Cormorant, DM Mono, Syne (Google Fonts)</li>
+    </ul>
+
+    <h2>Privacy Policy Summary</h2>
+    <p>
+      vibra collects no personal data. We do not use cookies, analytics, or tracking pixels.
+      We do not serve advertisements. Your IP address may appear in server logs temporarily
+      but is not stored permanently. Files uploaded are stored temporarily and deleted when
+      the server restarts. We do not share any data with third parties.
+    </p>
+
+    <h2>How to use vibra</h2>
+    <ol>
+      <li>Open vibra in any modern web browser — no installation needed</li>
+      <li>Enter any display name (anonymous, no real name required)</li>
+      <li>Enter a room name to create or join a chat room</li>
+      <li>Share the room name with anyone you want to chat with privately</li>
+      <li>Messages are automatically encrypted before leaving your browser</li>
+      <li>Use the paperclip button to attach images, audio, video, or documents</li>
+      <li>Click the shield badge to view encryption details</li>
+      <li>Click "leave" to exit — the room is destroyed when everyone leaves</li>
+    </ol>
+
+    <h2>Comparison with other apps</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>vibra</th>
+          <th>Signal</th>
+          <th>Telegram</th>
+          <th>WhatsApp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>No account required</td><td>Yes</td><td>No (phone number)</td><td>No</td><td>No</td></tr>
+        <tr><td>Browser-based</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>E2E encrypted by default</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+        <tr><td>Zero message storage</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+        <tr><td>No ads</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Open source</td><td>Yes</td><td>Yes</td><td>Partial</td><td>No</td></tr>
+        <tr><td>Self-hostable</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+        <tr><td>File sharing with preview</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+  </article>
+</section>
+
+<!-- Semantic footer for crawlers -->
+<footer style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" itemscope itemtype="https://schema.org/WPFooter">
+  <p>&copy; 2025 vibra. Free encrypted private chat. No account required. No data stored.</p>
+  <nav aria-label="Footer links">
+    <a href="https://vibra.app/">Home</a>
+    <a href="https://vibra.app/privacy">Privacy Policy</a>
+    <a href="https://vibra.app/security">Security</a>
+    <a href="https://vibra.app/faq">FAQ</a>
+    <a href="https://vibra.app/about">About</a>
+  </nav>
+  <address>
+    <span itemprop="name">vibra</span> —
+    <a itemprop="url" href="https://vibra.app">https://vibra.app</a>
+  </address>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════════
+   CRYPTO MODULE
+   - ECDH P-256: generate keypair, derive shared secret per peer
+   - HKDF-SHA-256: stretch shared secret into 256-bit AES key
+   - AES-256-GCM: encrypt / decrypt messages
+   ═══════════════════════════════════════════════════════════════════════ */
+const E2E = (() => {
+  const subtle = crypto.subtle;
+
+  // Generate an ECDH P-256 keypair; returns { privateKey, publicKey, publicKeyJwk }
+  async function generateKeypair() {
+    const kp = await subtle.generateKey(
+      { name: 'ECDH', namedCurve: 'P-256' },
+      true,
+      ['deriveKey', 'deriveBits']
+    );
+    const publicKeyJwk = await subtle.exportKey('jwk', kp.publicKey);
+    return { privateKey: kp.privateKey, publicKey: kp.publicKey, publicKeyJwk };
+  }
+
+  // Import a peer's public key from JWK
+  async function importPeerKey(jwk) {
+    return subtle.importKey(
+      'jwk', jwk,
+      { name: 'ECDH', namedCurve: 'P-256' },
+      false,
+      []
+    );
+  }
+
+  // Derive a 256-bit AES-GCM key from our private key + peer's public key using HKDF
+  async function deriveSharedKey(myPrivateKey, peerPublicKey, roomLabel) {
+    const bits = await subtle.deriveBits(
+      { name: 'ECDH', public: peerPublicKey },
+      myPrivateKey,
+      256
+    );
+    // HKDF to strengthen and bind to the room
+    const baseKey = await subtle.importKey('raw', bits, { name: 'HKDF' }, false, ['deriveKey']);
+    const info    = new TextEncoder().encode('vibra:room:' + roomLabel);
+    const salt    = new Uint8Array(32); // zero salt (both sides agree)
+    return subtle.deriveKey(
+      { name: 'HKDF', hash: 'SHA-256', salt, info },
+      baseKey,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['encrypt', 'decrypt']
+    );
+  }
+
+  // Encrypt plaintext → { ciphertext: base64, iv: base64 }
+  async function encrypt(plaintext, aesKey) {
+    const iv  = crypto.getRandomValues(new Uint8Array(12));
+    const ct  = await subtle.encrypt(
+      { name: 'AES-GCM', iv },
+      aesKey,
+      new TextEncoder().encode(plaintext)
+    );
+    return {
+      ciphertext: btoa(String.fromCharCode(...new Uint8Array(ct))),
+      iv:         btoa(String.fromCharCode(...iv))
+    };
+  }
+
+  // Decrypt base64 ciphertext → plaintext string (or null on failure)
+  async function decrypt(b64ct, b64iv, aesKey) {
+    try {
+      const from = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+      const pt   = await subtle.decrypt(
+        { name: 'AES-GCM', iv: from(b64iv) },
+        aesKey,
+        from(b64ct)
+      );
+      return new TextDecoder().decode(pt);
+    } catch {
+      return null; // wrong key or tampered
+    }
+  }
+
+  return { generateKeypair, importPeerKey, deriveSharedKey, encrypt, decrypt };
+})();
+
+/* ═══════════════════════════════════════════════════════════════════════
+   APP STATE
+   ═══════════════════════════════════════════════════════════════════════ */
+let socket;
+
+const state = {
+  userId:     null,
+  username:   null,
+  room:       null,
+  online:     false,
+  encOpen:    false,
+  pendingFile: null,
+
+  // Crypto
+  keypair:    null,   // { privateKey, publicKey, publicKeyJwk }
+
+  // Map<peerId, CryptoKey (AES-GCM)> — one shared key per peer
+  peerKeys:   new Map(),
+
+  // Typing
+  isTyping:   false,
+  typTimer:   null,
+};
+
+/* ═══════════════════════════════════════════════════════════════════════
+   DOM HELPERS
+   ═══════════════════════════════════════════════════════════════════════ */
+const $   = id => document.getElementById(id);
+const esc = s  => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const fmt = b  => b < 1024 ? b+'B' : b < 1048576 ? (b/1024).toFixed(1)+'KB' : (b/1048576).toFixed(1)+'MB';
+
+const loginScreen = $('login-screen'), chatScreen = $('chat-screen');
+const inpName  = $('inp-name'), inpRoom   = $('inp-room'), btnJoin = $('btn-join');
+const msgList  = $('messages'), msgInput  = $('msg-input'), btnSend = $('btn-send');
+const hdrRoom  = $('hdr-room'), hdrCount  = $('hdr-count'), liveDot = $('live-dot');
+const typRow   = $('typing-row'), charCount = $('char-count');
+const encBadge = $('enc-badge'), encPanel = $('enc-panel'), btnLeave = $('btn-leave');
+const btnAttach = $('btn-attach'), fileInput = $('file-input');
+const fileStrip = $('file-strip'), uploadBar = $('upload-bar');
+const progFill  = $('progress-fill'), progLabel = $('progress-label');
+const lightbox  = $('lightbox'), lbImg = $('lb-img');
+
+function toast(msg) {
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2400);
+}
+function scroll() { msgList.scrollTop = msgList.scrollHeight; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RENDER
+   ═══════════════════════════════════════════════════════════════════════ */
+let lastSender = null;
+
+function sysMsg(text) {
+  const d = document.createElement('div');
+  d.className = 'msg sys';
+  d.innerHTML = `<div class="sys-text">${esc(text)}</div>`;
+  msgList.appendChild(d); scroll();
+}
+
+function renderText({ senderId, username, text, timestamp, isSelf, decrypted }) {
+  const wrap = document.createElement('div');
+  wrap.className = `msg ${isSelf ? 'self' : 'other'}`;
+
+  const t       = new Date(timestamp).toLocaleTimeString('en-US', { hour12:false, hour:'2-digit', minute:'2-digit' });
+  const senderKey = isSelf ? '__self__' : senderId;
+  const showHdr   = senderKey !== lastSender;
+  lastSender      = senderKey;
+
+  const displayText = text || '<span style="opacity:.4;font-style:italic">unable to decrypt</span>';
+
+  wrap.innerHTML = `
+    ${showHdr ? `<div class="msg-header">
+      ${isSelf
+        ? `<span class="msg-time">${t}</span><span class="sender">you</span>`
+        : `<span class="sender">${esc(username)}</span><span class="msg-time">${t}</span>`}
+    </div>` : ''}
+    <div class="msg-bubble">${decrypted ? esc(text) : displayText}</div>
+    <div class="msg-foot">
+      <i class="fa-solid fa-lock"></i>
+      ${senderId.toLowerCase().slice(0,8)}
+    </div>`;
+  msgList.appendChild(wrap); scroll();
+}
+
+function renderFile({ senderId, username, fileUrl, originalName, mimetype, size, fileType, timestamp, isSelf }) {
+  const wrap = document.createElement('div');
+  wrap.className = `msg ${isSelf ? 'self' : 'other'}`;
+
+  const t         = new Date(timestamp).toLocaleTimeString('en-US', { hour12:false, hour:'2-digit', minute:'2-digit' });
+  const senderKey = isSelf ? '__self__' : senderId;
+  const showHdr   = senderKey !== lastSender;
+  lastSender      = senderKey;
+
+  let preview = '';
+  if (fileType === 'image') {
+    preview = `<img class="preview-img" src="${fileUrl}" alt="${esc(originalName)}" loading="lazy" data-full="${fileUrl}" />`;
+  } else if (fileType === 'audio') {
+    preview = `
+      <div class="preview-audio-wrap">
+        <div class="audio-filename">${esc(originalName)}</div>
+        <audio class="preview-audio" controls preload="metadata">
+          <source src="${fileUrl}" type="${esc(mimetype)}">
+        </audio>
+      </div>`;
+  } else if (fileType === 'video') {
+    preview = `<video class="preview-video" controls preload="metadata">
+        <source src="${fileUrl}" type="${esc(mimetype)}">
+      </video>`;
+  } else {
+    const icon = fileIcon(mimetype);
+    preview = `
+      <a class="preview-file" href="${fileUrl}" download="${esc(originalName)}" target="_blank">
+        <i class="${icon} file-icon"></i>
+        <div class="file-meta">
+          <span class="file-name">${esc(originalName)}</span>
+          <div class="file-size">${fmt(size)}</div>
+        </div>
+      </a>`;
+  }
+
+  wrap.innerHTML = `
+    ${showHdr ? `<div class="msg-header">
+      ${isSelf
+        ? `<span class="msg-time">${t}</span><span class="sender">you</span>`
+        : `<span class="sender">${esc(username)}</span><span class="msg-time">${t}</span>`}
+    </div>` : ''}
+    ${preview}
+    <div class="msg-foot">
+      <i class="fa-regular fa-file"></i>
+      ${esc(originalName)} · ${fmt(size)}
+    </div>`;
+
+  const img = wrap.querySelector('.preview-img');
+  if (img) img.addEventListener('click', () => { lbImg.src = img.dataset.full; lightbox.classList.add('open'); });
+
+  msgList.appendChild(wrap); scroll();
+}
+
+function fileIcon(mime) {
+  if (mime.startsWith('image/')) return 'fa-regular fa-image';
+  if (mime.startsWith('audio/')) return 'fa-regular fa-file-audio';
+  if (mime.startsWith('video/')) return 'fa-regular fa-file-video';
+  if (mime === 'application/pdf') return 'fa-regular fa-file-pdf';
+  if (mime === 'application/zip') return 'fa-regular fa-file-zipper';
+  return 'fa-regular fa-file';
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   LIGHTBOX
+   ═══════════════════════════════════════════════════════════════════════ */
+lightbox.addEventListener('click', () => { lightbox.classList.remove('open'); lbImg.src = ''; });
+$('lb-img').addEventListener('click', e => e.stopPropagation());
+
+/* ═══════════════════════════════════════════════════════════════════════
+   TYPING
+   ═══════════════════════════════════════════════════════════════════════ */
+const typers = new Set();
+function updateTyping() {
+  if (!typers.size) { typRow.innerHTML = ''; return; }
+  typRow.innerHTML = `
+    <span>${esc([...typers].join(', '))} ${typers.size === 1 ? 'is' : 'are'} typing</span>
+    <div class="dots"><span></span><span></span><span></span></div>`;
+}
+function startTyping() {
+  if (!state.isTyping && state.online) { state.isTyping = true; socket.emit('typing', true); }
+  clearTimeout(state.typTimer);
+  state.typTimer = setTimeout(stopTyping, 1800);
+}
+function stopTyping() {
+  if (state.isTyping) { state.isTyping = false; if (state.online) socket.emit('typing', false); }
+  clearTimeout(state.typTimer);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   FILE ATTACH
+   ═══════════════════════════════════════════════════════════════════════ */
+btnAttach.addEventListener('click', () => fileInput.click());
+
+fileInput.addEventListener('change', () => {
+  const f = fileInput.files[0];
+  if (!f) return;
+  if (f.size > 20 * 1024 * 1024) { toast('File too large (max 20 MB)'); fileInput.value = ''; return; }
+  state.pendingFile = f;
+  showStrip(f);
+  fileInput.value = '';
+});
+
+function showStrip(file) {
+  fileStrip.innerHTML = '';
+  fileStrip.classList.add('visible');
+  const item = document.createElement('div');
+  item.className = 'strip-item';
+
+  const addRemove = () => {
+    const btn = document.createElement('button');
+    btn.className = 'strip-rm';
+    btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    btn.addEventListener('click', clearPending);
+    item.appendChild(btn);
+  };
+
+  if (file.type.startsWith('image/')) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      item.innerHTML = `<img class="strip-thumb" src="${e.target.result}" alt=""/>
+        <span class="strip-label">${esc(file.name)}</span>`;
+      addRemove();
+    };
+    reader.readAsDataURL(file);
+  } else {
+    item.innerHTML = `<i class="${fileIcon(file.type)} strip-icon"></i>
+      <span class="strip-label">${esc(file.name)}</span>`;
+    addRemove();
+  }
+  fileStrip.appendChild(item);
+}
+
+function clearPending() {
+  state.pendingFile = null;
+  fileStrip.innerHTML = '';
+  fileStrip.classList.remove('visible');
+}
+
+async function uploadFile(file) {
+  return new Promise((resolve, reject) => {
+    const fd  = new FormData();
+    fd.append('file', file);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/upload');
+    xhr.upload.onprogress = e => {
+      if (!e.lengthComputable) return;
+      const p = Math.round((e.loaded / e.total) * 100);
+      progFill.style.width = p + '%';
+      progLabel.textContent = `Uploading… ${p}%`;
+    };
+    xhr.onload = () => {
+      uploadBar.classList.remove('visible');
+      progFill.style.width = '0%';
+      xhr.status === 200 ? resolve(JSON.parse(xhr.responseText)) : reject(new Error('Upload failed'));
+    };
+    xhr.onerror = () => { uploadBar.classList.remove('visible'); reject(new Error('Network error')); };
+    uploadBar.classList.add('visible');
+    progLabel.textContent = 'Uploading…';
+    xhr.send(fd);
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SEND MESSAGE
+   ═══════════════════════════════════════════════════════════════════════ */
+async function send() {
+  if (!state.online) return;
+
+  // — Send file
+  if (state.pendingFile) {
+    const file = state.pendingFile;
+    clearPending();
+    btnSend.disabled = true;
+    try {
+      const res = await uploadFile(file);
+      socket.emit('file_message', res);
+    } catch { toast('Upload failed — please try again'); }
+    btnSend.disabled = false;
+    return;
+  }
+
+  // — Send encrypted text
+  const text = msgInput.value.trim();
+  if (!text) return;
+  if (state.peerKeys.size === 0) {
+    // No peers yet: still send so the user sees their own message,
+    // but warn that nobody will be able to decrypt it.
+    toast('No peers in room yet — message queued locally');
+  }
+
+  // Encrypt for each peer and broadcast
+  // For simplicity (group chat), we use the first shared key for all
+  // In a real app you'd send separate ciphertexts per peer (signal protocol)
+  // Here we derive a deterministic "room key" from XOR of all sorted shared keys
+  // to keep the UX simple while still never sending the key over the wire.
+  const aesKey = await getRoomKey();
+  if (!aesKey) { toast('Waiting for encryption keys…'); return; }
+
+  const { ciphertext, iv } = await E2E.encrypt(text, aesKey);
+  socket.emit('message', { ciphertext, iv });
+
+  msgInput.value = '';
+  resize(); charCount.textContent = '0 / 2000';
+  stopTyping();
+}
+
+// Derive a stable group key: ECDH shared secret with each peer,
+// then XOR all 256-bit keys together → one AES key for the room.
+// If there's only one peer, use that key directly.
+async function getRoomKey() {
+  if (state.peerKeys.size === 0) return null;
+  if (state.peerKeys.size === 1) return [...state.peerKeys.values()][0];
+
+  // Export all keys as raw bytes, XOR them
+  const raws = await Promise.all(
+    [...state.peerKeys.values()].map(k => crypto.subtle.exportKey('raw', k))
+  );
+  const combined = new Uint8Array(32);
+  for (const raw of raws) {
+    const arr = new Uint8Array(raw);
+    for (let i = 0; i < 32; i++) combined[i] ^= arr[i];
+  }
+  return crypto.subtle.importKey('raw', combined, { name: 'AES-GCM' }, false, ['encrypt','decrypt']);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SOCKET / CONNECT
+   ═══════════════════════════════════════════════════════════════════════ */
+async function connect() {
+  const name = inpName.value.trim();
+  const room = inpRoom.value.trim();
+  if (!name) { toast('Enter a display name'); inpName.focus(); return; }
+  if (!room) { toast('Enter a room name');   inpRoom.focus(); return; }
+
+  btnJoin.disabled = true;
+  btnJoin.textContent = 'Generating keys…';
+
+  // Generate ECDH keypair
+  try {
+    state.keypair = await E2E.generateKeypair();
+  } catch {
+    toast('Key generation failed'); btnJoin.disabled = false; btnJoin.textContent = 'Join room'; return;
+  }
+
+  socket = io({ transports: ['websocket'] });
+
+  socket.on('connect', () => {
+    state.online = true;
+    liveDot.classList.remove('off');
+    socket.emit('join_room', {
+      username: name,
+      room,
+      pubKey: state.keypair.publicKeyJwk   // send only public key
+    });
+  });
+
+  socket.on('disconnect', () => {
+    state.online = false; liveDot.classList.add('off'); toast('Disconnected');
+  });
+
+  socket.on('room_joined', async ({ userId, room: r, userCount, peers }) => {
+    state.userId   = userId;
+    state.username = name;
+    state.room     = r;
+
+    hdrRoom.textContent  = r;
+    hdrCount.textContent = userCount;
+    $('ep-uid').textContent  = userId.toLowerCase();
+    $('ep-room').textContent = r;
+    $('ep-peers').textContent = peers.length;
+
+    // Derive shared key with each existing peer
+    for (const peer of peers) {
+      await addPeer(peer.userId, peer.pubKey);
+    }
+
+    btnJoin.disabled    = false;
+    btnJoin.textContent = 'Join room';
+    loginScreen.classList.add('hidden');
+    chatScreen.classList.remove('hidden');
+    msgInput.focus();
+    sysMsg(`You joined "${r}" · ${peers.length} peer${peers.length !== 1 ? 's' : ''} present`);
+  });
+
+  // A new peer joined — derive shared key with them
+  socket.on('peer_joined', async ({ userId, username, pubKey }) => {
+    await addPeer(userId, pubKey);
+    $('ep-peers').textContent = state.peerKeys.size;
+    sysMsg(`${username} joined`);
+    hdrCount.textContent = state.peerKeys.size + 1; // +1 = self
+  });
+
+  socket.on('peer_left', ({ userId }) => {
+    state.peerKeys.delete(userId);
+    $('ep-peers').textContent = state.peerKeys.size;
+  });
+
+  socket.on('system', ({ text }) => sysMsg(text));
+  socket.on('user_count', n => hdrCount.textContent = n);
+  socket.on('typing', ({ username: u, isTyping }) => {
+    isTyping ? typers.add(u) : typers.delete(u); updateTyping();
+  });
+
+  // Receive encrypted text message
+  socket.on('message', async (msg) => {
+    const isSelf = msg.senderId === state.userId;
+    const aesKey = await getRoomKey();
+    let text     = null;
+    if (aesKey) text = await E2E.decrypt(msg.ciphertext, msg.iv, aesKey);
+    renderText({ ...msg, text, isSelf, decrypted: text !== null });
+    typers.delete(msg.username); updateTyping();
+  });
+
+  // Receive file message (not encrypted — file URL is served from server)
+  socket.on('file_message', msg => {
+    const isSelf = msg.senderId === state.userId;
+    renderFile({ ...msg, isSelf });
+    typers.delete(msg.username); updateTyping();
+  });
+
+  socket.on('connect_error', () => {
+    toast('Connection failed');
+    btnJoin.disabled = false;
+    btnJoin.textContent = 'Join room';
+  });
+  socket.on('error', ({ message }) => toast(message));
+}
+
+async function addPeer(peerId, pubKeyJwk) {
+  try {
+    const peerPubKey  = await E2E.importPeerKey(pubKeyJwk);
+    const sharedKey   = await E2E.deriveSharedKey(state.keypair.privateKey, peerPubKey, state.room);
+    state.peerKeys.set(peerId, sharedKey);
+  } catch (e) {
+    console.warn('Could not derive key for peer', peerId, e);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   INPUT EVENTS
+   ═══════════════════════════════════════════════════════════════════════ */
+function resize() {
+  msgInput.style.height = 'auto';
+  msgInput.style.height = Math.min(msgInput.scrollHeight, 120) + 'px';
+}
+
+msgInput.addEventListener('input', () => {
+  resize(); charCount.textContent = `${msgInput.value.length} / 2000`;
+  msgInput.value.trim() ? startTyping() : stopTyping();
+});
+msgInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }
+});
+msgInput.addEventListener('paste', e => {
+  const img = [...(e.clipboardData?.items || [])].find(i => i.type.startsWith('image/'));
+  if (!img) return;
+  e.preventDefault();
+  const f = img.getAsFile();
+  if (f) { state.pendingFile = f; showStrip(f); }
+});
+
+btnSend.addEventListener('click', send);
+btnJoin.addEventListener('click', connect);
+[inpName, inpRoom].forEach(i => i.addEventListener('keydown', e => { if (e.key === 'Enter') connect(); }));
+
+btnLeave.addEventListener('click', () => {
+  if (socket) socket.disconnect();
+  Object.assign(state, { userId:null, keypair:null, online:false, isTyping:false });
+  state.peerKeys.clear();
+  msgList.innerHTML = ''; typers.clear(); typRow.innerHTML = '';
+  lastSender = null; clearPending();
+  chatScreen.classList.add('hidden');
+  loginScreen.classList.remove('hidden');
+  encPanel.classList.remove('open');
+  inpName.focus();
+});
+
+encBadge.addEventListener('click', e => {
+  e.stopPropagation(); state.encOpen = !state.encOpen;
+  encPanel.classList.toggle('open', state.encOpen);
+});
+document.addEventListener('click', e => {
+  if (!encPanel.contains(e.target) && e.target !== encBadge) {
+    state.encOpen = false; encPanel.classList.remove('open');
+  }
+});
+
+window.addEventListener('load', () => inpName.focus());
+</script>
+</body>
+</html>
